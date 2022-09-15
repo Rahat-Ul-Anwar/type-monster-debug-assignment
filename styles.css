@@ -188,20 +188,25 @@ button {
 }
 
 @media only screen and (max-width: 576px) {
-  /* .box-container {
+  .box-container {
     padding: 0 20px;
     width: 100%;
-  } */
+  }
 
   #histories{
     display: flex;
     flex-direction: column;
 
   }
-  /* .card {
+  .card {
     display: flex;
     flex-direction: column;
-  } */
+     
+  }
+
+  .card p{
+    padding: 10px;
+  }
 }
 
 
