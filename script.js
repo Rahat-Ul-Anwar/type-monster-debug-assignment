@@ -34,11 +34,15 @@ const typeController = (e) => {
   // these are the valid character we are allowing to type
   const validLetters =
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890!@#$%^&*()_+-={}[]'\".,?";
+   
 
   // if it is not a valid character like Control/Alt then skip displaying anything
+  
   if (!validLetters.includes(newLetter)) {
-    return errorCount++;   //something missing
+   return errorCount++;
   }
+    
+ 
 
   userText += newLetter;
 
@@ -114,7 +118,7 @@ const start = () => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
     // finished timer
-    if (count == -1) {
+    if (count == 0) {
 
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
@@ -138,7 +142,7 @@ const start = () => {
 };
  
 // START Countdown
-startBtn.addEventListener("click", start);
+startBtn.addEventListener("click", start); 
 
 // If history exists, show it
 displayHistory();
