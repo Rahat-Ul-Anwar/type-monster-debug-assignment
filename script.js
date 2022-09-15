@@ -23,7 +23,7 @@ fetch("./texts.json")
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
   const newLetter = e.key;
-  console.log(newLetter);
+  // console.log(newLetter);
 
   // Handle backspace press
   if (newLetter == "Backspace") {
@@ -37,7 +37,7 @@ const typeController = (e) => {
 
   // if it is not a valid character like Control/Alt then skip displaying anything
   if (!validLetters.includes(newLetter)) {
-    return;  //something missing rahat
+    return errorCount++;   //something missing
   }
 
   userText += newLetter;
